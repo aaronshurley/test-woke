@@ -16,4 +16,4 @@ jobs:
       - name: woke
         run: |
           curl -sSfL https://git.io/getwoke | bash -s -- -b /usr/local/bin
-          woke -c https://inclusivenaming.org/word-lists/index.json -o github-actions
+          woke -c https://inclusivenaming.org/word-lists/index.json -o github-actions --exit-1-on-failure
