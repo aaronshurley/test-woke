@@ -2,7 +2,7 @@
 name: Check inclusive language
 
 on:
-  pull_request_target:
+  pull_request:
     types: ['opened']
 
 jobs:
@@ -20,4 +20,4 @@ jobs:
       - name: woke
         run: |
           go install github.com/get-woke/woke@latest
-          woke
+          woke --exit-1-on-failure
