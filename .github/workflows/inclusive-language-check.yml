@@ -1,0 +1,16 @@
+---
+name: Check inclusive language
+
+on:
+  pull_request_target:
+    types: ['opened']
+
+jobs:
+  check-inclusive-language:
+    name: Check inclusive language
+    runs-on: ubuntu-latest
+    steps:
+      - name: woke
+        run: |
+          curl -sSfL https://git.io/getwoke | bash -s -- -b /usr/local/bin
+          woke -c https://inclusivenaming.org/word-lists/index.json
