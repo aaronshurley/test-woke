@@ -20,4 +20,4 @@ jobs:
       - name: woke
         run: |
           go install github.com/get-woke/woke@latest
-          woke -c https://inclusivenaming.org/word-lists/index.json
+          woke
