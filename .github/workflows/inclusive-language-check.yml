@@ -10,7 +10,14 @@ jobs:
     name: Check inclusive language
     runs-on: ubuntu-latest
     steps:
+      - name: Install Go 1.19
+        uses: actions/setup-go@v3
+        with:
+          go-version: "1.19"
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: '0'
       - name: woke
         run: |
-          curl -sSfL https://git.io/getwoke | bash -s -- -b /usr/local/bin
+          go install github.com/get-woke/woke@latest
           woke -c https://inclusivenaming.org/word-lists/index.json
