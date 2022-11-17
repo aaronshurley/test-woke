@@ -7,6 +7,4 @@ on:
 
 jobs:
   check-inclusive-language:
-    name: Check inclusive language
-    runs-on: ubuntu-latest
     uses: aaronshurley/test-woke/.github/workflows/inclusive-language-check.yml@main
