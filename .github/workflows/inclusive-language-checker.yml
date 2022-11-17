@@ -9,7 +9,4 @@ jobs:
   check-inclusive-language:
     name: Check inclusive language
     runs-on: ubuntu-latest
-    steps:
-      - uses: aaronshurley/test-woke/.github/workflows/inclusive-language-check.yml@main
-        with:
-          fetch-depth: '0'
+    uses: aaronshurley/test-woke/.github/workflows/inclusive-language-check.yml@main
